@@ -22,14 +22,14 @@ public:
     ofVec2f vel; //variable to hold velocity
     float rad; //variable to hold radius
     ofColor myColor; //variable to hold color
-    int sides;
-    float location;
+    int sides; //variable to hold the number of sides
+    float location; //variable to hold the location
     
     //These variables are all specific within the class
     
     Bubble();
     
-    float rot;
+    float rot; //variable to hold the rotation 
 
     
     

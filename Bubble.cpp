@@ -10,46 +10,35 @@
 
 Bubble::Bubble(){
     
-    pos = ofVec2f(ofGetMouseX()-400, ofGetMouseY()-400);
-    vel = ofVec2f(2,2);
-    rad = 50;
-    myColor = ofColor ((255),ofRandom(255), ofRandom(255));
-    rot = 400;
+    pos = ofVec2f(ofGetMouseX()-400, ofGetMouseY()-400); //position of the bubbles
+    vel = ofVec2f(2,2); //veloctiy of the bubbles
+    rad = 50; //raidus of the bubbles
+    myColor = ofColor ((255),ofRandom(255), ofRandom(255)); //the color of the bubbles
+    rot = 400; //the rotation of the bubbles
      
 }
 
 void Bubble::setup(int _sides){
-    sides = _sides;
+    sides = _sides; //defines the number of sides
 }
 
 void Bubble::update(){
     pos +=vel; //Moves the ball
-    //rot+=abs(vel.x);
-    rot+=(4,4);
+    rot+=(4,4); //creates the rotation
     
 }
 
 void Bubble::draw(){
-    ofSetColor(myColor);
-    ofSetCircleResolution(sides);
-    //option 1
-    /*
-    ofPushMatrix();
-    ofTranslate(pos);
-    ofRotate(rot);
-    ofCircle(0,0,rad); //I DONT KNOW WHAT THIS DOES
-    ofPopMatrix();
-    */
+    ofSetColor(myColor); //sets the color
+    ofSetCircleResolution(sides); //sets the resolution of the bubbles
      
-     
+
     
-    //option 2
-    
-    ofPushMatrix();
-    ofTranslate(400, 400);
-    ofRotate(rot);
-    ofCircle(pos,rad); //I DONT KNOW WHAT THIS DOES
-    ofPopMatrix();
+    ofPushMatrix(); // pushes the matrix
+    ofTranslate(400, 400); //translates the bubbles
+    ofRotate(rot); //creates rotation
+    ofCircle(pos,rad); //gives the bubbles position and radius
+    ofPopMatrix(); //pops the matrix
     
     
     
